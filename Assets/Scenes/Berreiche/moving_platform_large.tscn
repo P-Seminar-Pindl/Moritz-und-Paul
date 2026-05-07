@@ -43,4 +43,3 @@ position = Vector2(-1.2119455e-07, -6.1657285e-10)
 rotation = 1.5758837
 scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_gass7")
-one_way_collision = true
