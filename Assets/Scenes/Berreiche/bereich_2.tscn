@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://b6py7xih1xy3l" path="res://Assets/Scenes/Berreiche/Münze.tscn" id="4_is5e6"]
 [ext_resource type="PackedScene" uid="uid://bdldsyg76pq11" path="res://Assets/Scenes/Beereiche Fuctionality/area_exit.tscn" id="4_ju50r"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_gmvbe"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_is5e6"]
 texture = ExtResource("1_is5e6")
 0:0/0 = 0
 0:0/0/terrain_set = 0
@@ -431,7 +431,7 @@ terrain_set_0/terrain_0/name = "oneway ground"
 terrain_set_0/terrain_0/color = Color(0.20230862, 0.5927241, 0.5038035, 1)
 terrain_set_0/terrain_1/name = "ground"
 terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
-sources/0 = SubResource("TileSetAtlasSource_gmvbe")
+sources/0 = SubResource("TileSetAtlasSource_is5e6")
 
 [sub_resource type="Curve2D" id="Curve2D_fktxl"]
 resource_local_to_scene = true
