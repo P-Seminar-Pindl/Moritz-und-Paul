@@ -1,11 +1,11 @@
 extends Control
+class_name HUD
 
+@export var münze_label : Label
+@export var tür_label : Label
 
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
+func update_münze_label(number : int):
+	münze_label.text = "X " + str(number)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
-	pass
+func _opened():
+	
