@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://cmed2b2krkpcn"]
+
+[ext_resource type="Texture2D" uid="uid://nisig3kj8jdl" path="res://Assets/Sprites/ChatGPT Image 8. Jan. 2026, 15_26_17.png" id="1_fs5wo"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fs5wo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_tspbv"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="AgentAnimator" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AgentAnimator"]
+root_node = NodePath("../..")
+
+[node name="Sprite2D" type="Sprite2D" parent="AgentAnimator"]
+position = Vector2(-7, -17.5)
+scale = Vector2(26.000002, 29.8125)
+texture = ExtResource("1_fs5wo")
+region_rect = Rect2(0, 0, 16, 16)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="AgentAnimator/Sprite2D"]
+sprite_frames = SubResource("SpriteFrames_fs5wo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AgentAnimator"]
+shape = SubResource("CapsuleShape2D_tspbv")

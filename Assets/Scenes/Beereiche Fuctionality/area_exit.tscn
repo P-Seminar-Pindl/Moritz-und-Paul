@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://bdldsyg76pq11"]
+
+[ext_resource type="Script" uid="uid://ex7poqnq1kmf" path="res://Assets/Scripts/area_exit.gd" id="1_liebu"]
+[ext_resource type="Texture2D" uid="uid://cm7mto2jghj5x" path="res://Assets/Sprites/pixilart-drawing (16).png" id="1_xcupp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_liebu"]
+size = Vector2(113, 93)
+
+[node name="AreaExit" type="Area2D" groups=["area_exits"]]
+collision_layer = 256
+script = ExtResource("1_liebu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -10
+texture = ExtResource("1_xcupp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 17.5)
+shape = SubResource("RectangleShape2D_liebu")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
