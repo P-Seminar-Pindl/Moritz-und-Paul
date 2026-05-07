@@ -7,5 +7,8 @@ class_name HUD
 func update_münze_label(number : int):
 	münze_label.text = "X " + str(number)
 
-func _opened():
-	
+func tür_opened():
+	tür_label.text = "Tür open!"
+
+func tür_closed():
+	tür_label.text = "tür closed ... Get Münzen! "

@@ -1,9 +1,10 @@
-[gd_scene load_steps=3 format=3 uid="uid://cbc3x1a57p0dl"]
+[gd_scene load_steps=4 format=3 uid="uid://cbc3x1a57p0dl"]
 
+[ext_resource type="Script" uid="uid://dxmic8uwvjrax" path="res://Assets/Scripts/hud.gd" id="1_cx8nk"]
 [ext_resource type="Texture2D" uid="uid://cv14v1iguw03n" path="res://Assets/Sprites/pixilart-drawing (18).png" id="1_moygp"]
 [ext_resource type="LabelSettings" uid="uid://6xd1koyh816a" path="res://Assets/Scenes/Ui Settings/hud.tres" id="2_b320u"]
 
-[node name="HUD" type="Control"]
+[node name="HUD" type="Control" node_paths=PackedStringArray("münze_label", "tür_label") groups=["hud"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -14,6 +15,9 @@ offset_right = 6.0
 offset_bottom = -1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_cx8nk")
+"münze_label" = NodePath("MünzeLabel")
+"tür_label" = NodePath("MünzeLabel/TürLabel")
 
 [node name="MünzeTexture" type="TextureRect" parent="."]
 layout_mode = 1

@@ -7,7 +7,10 @@ var area_path = "res://Assets/Scenes/Berreiche/"
 var münze = 0
 var area_container : Node2D
 var player : player
+var hud : HUD
+
 func _ready():
+	hud = get_tree().get_first_node_in_group("hud")
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
 	load_area(starting_area)
@@ -38,6 +41,7 @@ func load_area(area_number):
 	var instance = scene.instantiate()
 	area_container.add_child(instance)
 	reset_münze()
+	# Moving the player to start position of the new scene
 	var player_start_position = get_tree().get_first_node_in_group("player_start_position") as Node2D
 	player.teleport_to_location(player_start_position.position)
 
