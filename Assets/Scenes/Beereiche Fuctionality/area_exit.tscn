@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_liebu"]
 size = Vector2(113, 93)
 
-[node name="AreaExit" type="Area2D" groups=["area_exits"]]
+[node name="area_exit" type="Area2D" groups=["area_exits"]]
 collision_layer = 256
 script = ExtResource("1_liebu")
 

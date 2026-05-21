@@ -50,10 +50,13 @@ func load_area(area_number):
 
 func add_münze():
 	münze += 1
+	hud.update_münze_label(münze)
 	if münze >= 4:
 		var portal = get_tree().get_first_node_in_group("area_exits") as AreaExit
 		portal.open()
-		
+		hud.tür_opened()
 
 func reset_münze():
 	münze = 0
+	hud.update_münze_label(münze)
+	hud.tür_closed()
