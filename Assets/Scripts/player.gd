@@ -7,6 +7,7 @@ class_name player
 var speed_multiplier = 30.0
 var jump_multiplier = -30.0
 var direction = 0
+var can_control : bool = true
 
 #const SPEED = 300.0
 #const JUMP_VELOCITY = -400.0
@@ -20,6 +21,8 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
+	if not can_control: return
+	
 	# Add the gravity.
 	if not is_on_floor():
 		
@@ -44,3 +47,14 @@ func teleport_to_location(new_location):
 	global_position = new_location
 	await get_tree().physics_frame
 	camera.position_smoothing_enabled = true
+
+func handle_danger() -> void:
+	print("Player Died!")
+	visible = false
+	
+	await get_tree().create_timer(1).timeout
+	rest_player()
+	
+
+func rest_player() -> void:
+	global_position = GameManager.loaded_area.area_container.global_position
