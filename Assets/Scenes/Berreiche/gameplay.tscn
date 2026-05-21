@@ -18,3 +18,5 @@ position = Vector2(6, 20)
 
 [node name="Area" type="Node2D" parent="." groups=["area_container"]]
 position = Vector2(7, 26)
+
+[node name="AreaMenu" type="CanvasLayer" parent="."]
