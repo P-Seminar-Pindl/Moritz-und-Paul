@@ -8,7 +8,7 @@ var münze = 0
 var area_container : Node2D
 var player : player
 var hud : HUD
-
+var loaded_area = "player_start_position"
 
 
 func _ready():

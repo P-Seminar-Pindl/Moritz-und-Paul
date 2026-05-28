@@ -58,6 +58,6 @@ func handle_danger() -> void:
 	
 
 func reset_player() -> void:
-	global_position = GameManager.loaded_area.area_container.global_position
+	global_position = GameManager.loaded_area.player_start_position.global_position
 	visible = true
 	can_control = true
