@@ -52,6 +52,7 @@ func handle_danger() -> void:
 	print("Player Died!")
 	visible = false
 	can_control = false
+	
 	await get_tree().create_timer(1).timeout
 	reset_player()
 	

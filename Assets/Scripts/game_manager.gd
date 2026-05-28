@@ -9,6 +9,8 @@ var area_container : Node2D
 var player : player
 var hud : HUD
 
+
+
 func _ready():
 	hud = get_tree().get_first_node_in_group("hud")
 	area_container = get_tree().get_first_node_in_group("area_container")
@@ -26,6 +28,7 @@ func next_area():
 
 
 func load_area(area_number):
+	
 	# Checking the new scene path
 	var full_path = area_path + "bereich_" + str(current_area) + ".tscn"
 	#get_tree().change_scene_to_file(full_path)
