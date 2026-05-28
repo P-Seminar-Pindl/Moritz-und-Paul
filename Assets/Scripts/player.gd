@@ -51,10 +51,12 @@ func teleport_to_location(new_location):
 func handle_danger() -> void:
 	print("Player Died!")
 	visible = false
-	
+	can_control = false
 	await get_tree().create_timer(1).timeout
-	rest_player()
+	reset_player()
 	
 
-func rest_player() -> void:
+func reset_player() -> void:
 	global_position = GameManager.loaded_area.area_container.global_position
+	visible = true
+	can_control = true
