@@ -8,7 +8,9 @@ var münze = 0
 var area_container : Node2D
 var player : player
 var hud : HUD
-var loaded_area = "player_start_position"
+var loaded_area : Node2D
+var player_start_position : Node2D
+
 
 
 func _ready():
@@ -16,6 +18,7 @@ func _ready():
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
 	load_area(starting_area)
+
 
 
 	
@@ -43,10 +46,12 @@ func load_area(area_number):
 	# Setting up the new scene
 	var instance = scene.instantiate()
 	area_container.add_child(instance)
+	loaded_area = instance
 	reset_münze()
 	# Moving the player to start position of the new scene
-	var player_start_position = get_tree().get_first_node_in_group("player_start_position") as Node2D
+	player_start_position = get_tree().get_first_node_in_group("player_start_position") as Node2D
 	player.teleport_to_location(player_start_position.position)
+	
 
 
 
