@@ -435,7 +435,7 @@ terrain_set_0/terrain_1/color = Color(0.5, 0.4375, 0.25, 1)
 sources/0 = SubResource("TileSetAtlasSource_is5e6")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cknov"]
-size = Vector2(1888, 112)
+size = Vector2(3058, 112)
 
 [sub_resource type="Curve2D" id="Curve2D_fktxl"]
 resource_local_to_scene = true
@@ -477,7 +477,7 @@ tile_set = SubResource("TileSet_0gu3a")
 [node name="DangerZone" parent="TileMapLayer" instance=ExtResource("2_6b32h")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/DangerZone"]
-position = Vector2(896, 40)
+position = Vector2(983, 40)
 shape = SubResource("RectangleShape2D_cknov")
 
 [node name="MovingPlatformLarge" parent="." instance=ExtResource("3_cknov")]

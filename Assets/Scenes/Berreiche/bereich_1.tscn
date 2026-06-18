@@ -556,7 +556,7 @@ sources/1 = SubResource("TileSetAtlasSource_10wr7")
 sources/2 = SubResource("TileSetAtlasSource_wmicp")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_10wr7"]
-size = Vector2(170, 111)
+size = Vector2(1917, 137.5)
 
 [sub_resource type="Curve2D" id="Curve2D_5q488"]
 resource_local_to_scene = true
@@ -585,7 +585,7 @@ tile_set = SubResource("TileSet_0gu3a")
 [node name="DangerZone" parent="TileMapLayer" instance=ExtResource("4_dyfo6")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TileMapLayer/DangerZone"]
-position = Vector2(344, 24.5)
+position = Vector2(432.5, 56.75)
 shape = SubResource("RectangleShape2D_10wr7")
 
 [node name="MovingPlatformLarge" parent="." instance=ExtResource("3_0gu3a")]
