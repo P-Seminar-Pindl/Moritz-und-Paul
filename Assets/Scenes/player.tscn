@@ -100,18 +100,25 @@ platform_on_leave = 2
 script = ExtResource("1_7dd06")
 camera = NodePath("Camera2D")
 
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+position_smoothing_enabled = true
+position_smoothing_speed = 8.0
+
+[node name="AgentAnimator" type="Node2D" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AgentAnimator"]
+root_node = NodePath("../..")
+
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-2.499998, -39.499996)
 scale = Vector2(0.22352941, 0.21484376)
 sprite_frames = SubResource("SpriteFrames_fs5wo")
-animation = &"jump"
+animation = &"Idle"
+frame = 2
+frame_progress = 1.0
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-5.125, -32)
 shape = SubResource("RectangleShape2D_38rej")
 one_way_collision = true
-
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-position_smoothing_enabled = true
-position_smoothing_speed = 8.0
