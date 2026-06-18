@@ -1,7 +1,7 @@
 extends Path2D
 class_name MovingPlatform 
 
-@export var path_time = 1.0
+@export var path_time = 0.5
 @export var looping = false
 @export var ease : Tween.EaseType
 @export var transition : Tween.TransitionType
