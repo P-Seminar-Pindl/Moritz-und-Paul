@@ -52,3 +52,11 @@ offset_right = -48.0
 offset_bottom = -17.0
 text = "Test"
 label_settings = ExtResource("2_b320u")
+
+[node name="TodLabel" type="Label" parent="MünzeLabel"]
+layout_mode = 0
+offset_left = -8.0
+offset_top = 32.0
+offset_right = 40.0
+offset_bottom = 55.0
+text = "Test"

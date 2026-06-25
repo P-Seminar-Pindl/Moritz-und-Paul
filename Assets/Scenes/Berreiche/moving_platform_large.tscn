@@ -11,7 +11,7 @@ _data = {
 point_count = 2
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gass7"]
-size = Vector2(64, 5.3333335)
+size = Vector2(80, 10.666668)
 
 [node name="MovingPlatformLarge" type="Path2D" node_paths=PackedStringArray("path_follow_2D")]
 scale = Vector2(1, 0.93749994)
@@ -34,12 +34,11 @@ rotation = -1.5758837
 collision_layer = 64
 
 [node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
-position = Vector2(1.1920929e-07, 0.2499609)
-scale = Vector2(0.048141632, 0.6355248)
+scale = Vector2(0.10492113, 0.8021814)
 texture = ExtResource("1_xctn7")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
-position = Vector2(-1.2119455e-07, -6.1657285e-10)
+position = Vector2(4.7683716e-07, 0)
 rotation = 1.5758837
 scale = Vector2(1, 0.99999994)
 shape = SubResource("RectangleShape2D_gass7")
