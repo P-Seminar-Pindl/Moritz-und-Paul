@@ -451,12 +451,12 @@ _data = {
 }
 point_count = 2
 
-[sub_resource type="Curve2D" id="Curve2D_dt3d4"]
+[sub_resource type="Curve2D" id="Curve2D_18ptp"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2770, 839.46674, 0, 0, 0, 0, 11475.219, -258.56573, 0, 0, 0, 0, 23192.328, -378.4063, 0, 0, 0, 0, 148958.5, -474.52228)
+"points": PackedVector2Array(0, 0, 0, 0, -456, 67.918365, 0, 0, 0, 0, -409, -132.57143, 0, 0, 0, 0, -720, -1029.2245, 0, 0, 0, 0, 540, -60.73469, 0, 0, 0, 0, 582, -62.693874, 0, 0, 0, 0, 640, -74.448975, 0, 0, 0, 0, 899, -101.22449, 0, 0, 0, 0, 1686, -195.91837, 0, 0, 0, 0, -304, -992.6531)
 }
-point_count = 4
+point_count = 9
 
 [node name="bereich 4" type="Node2D"]
 
@@ -486,11 +486,6 @@ curve = SubResource("Curve2D_4i2x3")
 [node name="AreaExit" parent="." instance=ExtResource("4_2plm0")]
 position = Vector2(-3291, -1825)
 
-[node name="MovingPlatformLarge3" parent="." instance=ExtResource("3_da4io")]
-position = Vector2(5170.414, -1372.9569)
-scale = Vector2(-0.027225126, 1.6438494)
-curve = SubResource("Curve2D_dt3d4")
-
 [node name="Münze" parent="." instance=ExtResource("5_o4l1k")]
 position = Vector2(4393, -261)
 
@@ -502,3 +497,8 @@ position = Vector2(2337, -1503)
 
 [node name="Münze4" parent="." instance=ExtResource("5_o4l1k")]
 position = Vector2(-1613, -1197)
+
+[node name="MovingPlatformLarge2" parent="." instance=ExtResource("3_da4io")]
+position = Vector2(5520, -96)
+scale = Vector2(1, 1.53125)
+curve = SubResource("Curve2D_18ptp")
