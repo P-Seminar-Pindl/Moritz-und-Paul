@@ -5,6 +5,7 @@ var current_area = 1
 var area_path = "res://Assets/Scenes/Berreiche/"
 
 var münze = 0
+var tod = 0
 var area_container : Node2D
 var player : player
 var hud : HUD
@@ -18,6 +19,7 @@ func _ready():
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
 	load_area(starting_area)
+	hud.update_tod_label(tod)
 
 
 
@@ -63,6 +65,10 @@ func add_münze():
 		var portal = get_tree().get_first_node_in_group("area_exits") as AreaExit
 		portal.open()
 		hud.tür_opened()
+
+func add_tod():
+	tod += 1
+	hud.update_tod_label(tod)
 
 func reset_münze():
 	münze = 0

@@ -53,6 +53,7 @@ func handle_danger() -> void:
 	visible = false
 	can_control = false
 	
+	GameManager.add_tod()
 	await get_tree().create_timer(1).timeout
 	reset_player()
 	

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cv14v1iguw03n" path="res://Assets/Sprites/pixilart-drawing (18).png" id="1_moygp"]
 [ext_resource type="LabelSettings" uid="uid://6xd1koyh816a" path="res://Assets/Scenes/Ui Settings/hud.tres" id="2_b320u"]
 
-[node name="HUD" type="Control" node_paths=PackedStringArray("münze_label", "tür_label") groups=["hud"]]
+[node name="HUD" type="Control" node_paths=PackedStringArray("münze_label", "tür_label", "tod_label") groups=["hud"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -18,6 +18,7 @@ grow_vertical = 2
 script = ExtResource("1_cx8nk")
 "münze_label" = NodePath("MünzeLabel")
 "tür_label" = NodePath("MünzeLabel/TürLabel")
+"tod_label" = NodePath("MünzeLabel/TodLabel")
 
 [node name="MünzeTexture" type="TextureRect" parent="."]
 layout_mode = 1

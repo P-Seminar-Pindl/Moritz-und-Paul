@@ -461,9 +461,9 @@ point_count = 3
 [sub_resource type="Curve2D" id="Curve2D_umr7g"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -504, -62.69391, 0, 0, 0, 0, -456, -224.65302, 0, 0, 0, 0, 624, -224.65308, 0, 0, 0, 0, 1544, 109.71423)
+"points": PackedVector2Array(0, 0, 0, 0, -552, 73.14282, 0, 0, 0, 0, -512, -229.87756, 0, 0, 0, 0, 1408, -261.2245, 0, 0, 0, 0, 1536, 94.04077)
 }
-point_count = 5
+point_count = 4
 
 [node name="bereich 3" type="Node2D"]
 
