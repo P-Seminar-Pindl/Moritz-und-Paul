@@ -440,28 +440,28 @@ size = Vector2(14467, 377)
 [sub_resource type="Curve2D" id="Curve2D_7lcje"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -409, -132.57143, 0, 0, 0, 0, -192, 38.53061, 0, 0, 0, 0, 119, -8.489796, 0, 0, 0, 0, 174, -15.673466, 0, 0, 0, 0, 230, -22.204082, 0, 0, 0, 0, 274, -26.775509, 0, 0, 0, 0, 326, -33.306118, 0, 0, 0, 0, 385, -40.489796, 0, 0, 0, 0, 482, -54.204082, 0, 0, 0, 0, 540, -60.73469, 0, 0, 0, 0, 582, -62.693874, 0, 0, 0, 0, 640, -74.448975, 0, 0, 0, 0, 775, -92.08162, 0, 0, 0, 0, 844, -94.69388, 0, 0, 0, 0, 899, -101.22449, 0, 0, 0, 0, 948, -107.7551, 0, 0, 0, 0, 986, -112.32652, 0, 0, 0, 0, 1020.1245, -117.02634, 0, 0, 0, 0, 1072, -121.469376, 0, 0, 0, 0, 1169, -132.57143, 0, 0, 0, 0, 1227, -132.57143, 0, 0, 0, 0, 1279, -139.7551, 0, 0, 0, 0, 1338, -146.2857, 0, 0, 0, 0, 1424, -160, 0, 0, 0, 0, 1490, -169.14285, 0, 0, 0, 0, 1541, -173.71428, 0, 0, 0, 0, 1610, -180.24489, 0, 0, 0, 0, 1652, -191.34692, 0, 0, 0, 0, 1686, -195.91837, 0, 0, 0, 0, 1708, -201.7959, 0, 0, 0, 0, 1733, -207.67346, 0, 0, 0, 0, 1756, -214.20407, 0, 0, 0, 0, 1780, -218.77551, 0, 0, 0, 0, 1791, -223.34692, 0, 0, 0, 0, 1802.2875, -226.13629, 0, 0, 0, 0, 1812.1875, -226.85466, 0, 0, 0, 0, 3307, -521.1429)
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -704, -83.591835)
 }
-point_count = 38
+point_count = 2
 
-[sub_resource type="Curve2D" id="Curve2D_mun4s"]
+[sub_resource type="Curve2D" id="Curve2D_jvdfh"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -2, -66.38297)
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -495.99997, -31.346924, 0, 0, 0, 0, -120, -120.16324)
 }
-point_count = 1
+point_count = 3
 
 [sub_resource type="Curve2D" id="Curve2D_4i2x3"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -4, 15, 0, 0, 0, 0, -645.80676, -528.7822)
+"points": PackedVector2Array(0, 0, 0, 0, -4, 15, 0, 0, 0, 0, -15.453796, -355.67172, 0, 0, 0, 0, -645.80676, -528.7822)
 }
-point_count = 2
+point_count = 3
 
-[sub_resource type="Curve2D" id="Curve2D_dt3d4"]
+[sub_resource type="Curve2D" id="Curve2D_umr7g"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, 2770, 839.46674, 0, 0, 0, 0, 11475.219, -258.56573, 0, 0, 0, 0, 23192.328, -378.4063, 0, 0, 0, 0, 148958.5, -474.52228)
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -456, -224.65302, 0, 0, 0, 0, 624, -203.75507, 0, 0, 0, 0, 1568, 182.85718)
 }
 point_count = 4
 
@@ -481,26 +481,27 @@ position = Vector2(-78.5, 218.5)
 shape = SubResource("RectangleShape2D_jtr1t")
 
 [node name="MovingPlatformLarge" parent="." instance=ExtResource("2_jvdfh")]
-position = Vector2(584, -88)
+position = Vector2(1112, -176)
 scale = Vector2(1, 1.53125)
 curve = SubResource("Curve2D_7lcje")
 
-[node name="MovingPlatformLarge2" parent="." instance=ExtResource("2_jvdfh")]
-position = Vector2(-8, -312)
-scale = Vector2(1, 0.9791667)
-curve = SubResource("Curve2D_mun4s")
+[node name="MovingPlatformLarge5" parent="." instance=ExtResource("2_jvdfh")]
+position = Vector2(512, -424.00003)
+scale = Vector2(1, 1.5312501)
+curve = SubResource("Curve2D_jvdfh")
 
 [node name="MovingPlatformLarge4" parent="." instance=ExtResource("2_jvdfh")]
 position = Vector2(856.1316, -597.60706)
 scale = Vector2(1.0438596, 1.3113017)
 curve = SubResource("Curve2D_4i2x3")
 
+[node name="MovingPlatformLarge3" parent="." instance=ExtResource("2_jvdfh")]
+position = Vector2(40, -1136)
+scale = Vector2(1, 1.53125)
+curve = SubResource("Curve2D_umr7g")
+
 [node name="AreaExit" parent="." instance=ExtResource("3_umr7g")]
 position = Vector2(1938, -896)
-
-[node name="MovingPlatformLarge3" parent="." instance=ExtResource("2_jvdfh")]
-position = Vector2(-514, -1034)
-curve = SubResource("Curve2D_dt3d4")
 
 [node name="Münze" parent="." instance=ExtResource("4_jtr1t")]
 position = Vector2(745, -46)
