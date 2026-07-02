@@ -461,7 +461,7 @@ point_count = 3
 [sub_resource type="Curve2D" id="Curve2D_umr7g"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -456, -224.65302, 0, 0, 0, 0, 624, -203.75507, 0, 0, 0, 0, 1568, 182.85718)
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -456, -224.65302, 0, 0, 0, 0, 624, -224.65308, 0, 0, 0, 0, 1544, 109.71423)
 }
 point_count = 4
 
@@ -496,7 +496,7 @@ scale = Vector2(1.0438596, 1.3113017)
 curve = SubResource("Curve2D_4i2x3")
 
 [node name="MovingPlatformLarge3" parent="." instance=ExtResource("2_jvdfh")]
-position = Vector2(40, -1136)
+position = Vector2(56, -1120)
 scale = Vector2(1, 1.53125)
 curve = SubResource("Curve2D_umr7g")
 
