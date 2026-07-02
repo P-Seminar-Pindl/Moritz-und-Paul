@@ -498,7 +498,7 @@ curve = SubResource("Curve2D_gc472")
 position = Vector2(1774, -449)
 
 [node name="MovingPlatformLarge3" parent="." instance=ExtResource("3_cknov")]
-position = Vector2(1482, -326)
+position = Vector2(1480, -311.99997)
 curve = SubResource("Curve2D_6b32h")
 
 [node name="Münze" parent="." instance=ExtResource("4_is5e6")]
