@@ -14,9 +14,6 @@ var can_control : bool = true
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
-var jump_sound = preload("res://Assets/Sounds/jump.wav")
-var death_sound = preload("res://Assets/Sounds/death.wav")
-
 
 
 
