@@ -14,6 +14,8 @@ var can_control : bool = true
 
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var jump_sound = preload("res://Assets/Sounds/jump.wav")
+var death_sound = preload("res://Assets/Sounds/death.wav")
 
 
 
@@ -31,6 +33,7 @@ func _physics_process(delta):
 	# Handle jump.
 	if Input.is_action_just_pressed("jump") and is_on_floor():
 		velocity.y = jump_power*jump_multiplier
+		play_sound("jump")
 
 	#Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -50,6 +53,7 @@ func teleport_to_location(new_location):
 
 func handle_danger() -> void:
 	print("Player Died!")
+	play_sound("death")
 	visible = false
 	can_control = false
 	
@@ -62,3 +66,58 @@ func reset_player() -> void:
 	global_position = GameManager.player_start_position.global_position
 	visible = true
 	can_control = true
+
+func play_sound(sound_type: String) -> void:
+	var audio_player = AudioStreamPlayer.new()
+	audio_player.stream = create_sound_stream(sound_type)
+	get_tree().root.add_child(audio_player)
+	audio_player.play()
+	audio_player.finished.connect(audio_player.queue_free)
+
+func create_sound_stream(sound_type: String) -> AudioStreamWAV:
+	var stream = AudioStreamWAV.new()
+	stream.mix_rate = 22050
+	stream.format = AudioStreamWAV.FORMAT_16_BITS
+	stream.stereo = false
+
+	var duration: float
+	var frequency: float
+	var volume: float
+	var waveform: String
+
+	match sound_type:
+		"jump":
+			duration = 0.16
+			frequency = 660.0
+			volume = 0.18
+			waveform = "square"
+		"death":
+			duration = 0.35
+			frequency = 220.0
+			volume = 0.18
+			waveform = "triangle"
+		_: 
+			duration = 0.12
+			frequency = 880.0
+			volume = 0.22
+			waveform = "sine"
+
+	var sample_count = int(stream.mix_rate * duration)
+	var data = PackedByteArray()
+
+	for i in range(sample_count):
+		var t = float(i) / stream.mix_rate
+		var value: float = 0.0
+		match waveform:
+			"sine":
+				value = sin(2.0 * PI * frequency * t)
+			"triangle":
+				value = 2.0 * abs(2.0 * (t * frequency - floor(t * frequency + 0.5))) - 1.0
+			"square":
+				value = 1.0 if sin(2.0 * PI * frequency * t) >= 0.0 else -1.0
+		var sample = int(value * volume * 32767.0)
+		data.append(sample & 0xFF)
+		data.append((sample >> 8) & 0xFF)
+
+	stream.data = data
+	return stream
