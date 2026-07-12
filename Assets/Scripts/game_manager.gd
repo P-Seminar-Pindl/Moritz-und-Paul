@@ -18,8 +18,40 @@ func _ready():
 	hud = get_tree().get_first_node_in_group("hud")
 	area_container = get_tree().get_first_node_in_group("area_container")
 	player = get_tree().get_first_node_in_group("player")
+	start_background_music()
 	load_area(starting_area)
 	hud.update_tod_label(tod)
+
+func start_background_music() -> void:
+	var audio_player = AudioStreamPlayer.new()
+	audio_player.stream = create_background_stream()
+	audio_player.autoplay = true
+	audio_player.bus = "Master"
+	audio_player.volume_db = -12.0
+	audio_player.name = "BackgroundMusic"
+	get_tree().root.add_child(audio_player)
+	audio_player.play()
+
+func create_background_stream() -> AudioStreamWAV:
+	var stream = AudioStreamWAV.new()
+	stream.mix_rate = 22050
+	stream.format = AudioStreamWAV.FORMAT_16_BITS
+	stream.stereo = false
+
+	var duration = 2.0
+	var sample_count = int(stream.mix_rate * duration)
+	var data = PackedByteArray()
+
+	for i in range(sample_count):
+		var t = float(i) / stream.mix_rate
+		var base = sin(2.0 * PI * 220.0 * t) * 0.25
+		var harmony = sin(2.0 * PI * 330.0 * t) * 0.15
+		var sample = int((base + harmony) * 12000.0)
+		data.append(sample & 0xFF)
+		data.append((sample >> 8) & 0xFF)
+
+	stream.data = data
+	return stream
 
 
 

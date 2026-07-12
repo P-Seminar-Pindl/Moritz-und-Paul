@@ -84,10 +84,10 @@ func create_sound_stream(sound_type: String) -> AudioStreamWAV:
 
 	match sound_type:
 		"jump":
-			duration = 0.16
-			frequency = 660.0
-			volume = 0.18
-			waveform = "square"
+			duration = 0.18
+			frequency = 820.0
+			volume = 0.16
+			waveform = "sine"
 		"death":
 			duration = 0.35
 			frequency = 220.0
