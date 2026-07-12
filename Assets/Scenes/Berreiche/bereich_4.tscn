@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://c3y16msagmqx3"]
+[gd_scene load_steps=16 format=4 uid="uid://c3y16msagmqx3"]
 
 [ext_resource type="Texture2D" uid="uid://cso4ruybuc1a7" path="res://Assets/Sprites/pixil-frame-0 (1).png" id="1_4ucod"]
 [ext_resource type="PackedScene" uid="uid://c61kdd20cmp0s" path="res://Assets/Scenes/Berreiche/danger_zone.tscn" id="2_4nsui"]
@@ -440,9 +440,9 @@ size = Vector2(14467, 377)
 [sub_resource type="Curve2D" id="Curve2D_7lcje"]
 resource_local_to_scene = true
 _data = {
-"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -409, -132.57143, 0, 0, 0, 0, -192, 38.53061, 0, 0, 0, 0, 39, 0, 0, 0, 0, 0, 414, -60.08163, 0, 0, 0, 0, 807, -97.30612, 0, 0, 0, 0, 1119, -130.61224, 0, 0, 0, 0, 1338, -146.2857, 0, 0, 0, 0, 1652, -191.34692, 0, 0, 0, 0, 1812.1875, -226.85466, 0, 0, 0, 0, 3307, -521.1429)
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -409, -132.57143, 0, 0, 0, 0, -192, 38.53061, 0, 0, 0, 0, 39, 0, 0, 0, 0, 0, 414, -60.08163, 0, 0, 0, 0, 793, -118.85713, 0, 0, 0, 0, 1161, -205.71426, 0, 0, 0, 0, 1875, -263.18365)
 }
-point_count = 11
+point_count = 8
 
 [sub_resource type="Curve2D" id="Curve2D_4i2x3"]
 resource_local_to_scene = true
@@ -478,6 +478,13 @@ _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -537, 149.55103, 0, 0, 0, 0, -581.45447, 53.36084, 0, 0, 0, 0, -693.9999, -262.8994, 0, 0, 0, 0, -923.1389, -466.58142)
 }
 point_count = 4
+
+[sub_resource type="Curve2D" id="Curve2D_s7f7x"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -533, 56.816326, 0, 0, 0, 0, -338.64014, -124.88248, 0, 0, 0, 0, -39.939697, -191.89685, 0, 0, 0, 0, 309.9082, -276.18298, 0, 0, 0, 0, 881.73535, -361.16003)
+}
+point_count = 5
 
 [node name="bereich 4" type="Node2D"]
 
@@ -538,3 +545,8 @@ curve = SubResource("Curve2D_xdbf5")
 position = Vector2(2597.13, -2262)
 scale = Vector2(1.2350577, 1.5367091)
 curve = SubResource("Curve2D_jnmdb")
+
+[node name="MovingPlatformLarge7" parent="." instance=ExtResource("3_da4io")]
+position = Vector2(3018.0437, -542.23883)
+scale = Vector2(0.9775679, 1.4474503)
+curve = SubResource("Curve2D_s7f7x")
